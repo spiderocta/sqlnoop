@@ -2,7 +2,7 @@ from tkinter import *
 root = Tk()
 root.geometry('1010x550+200+30')
 root.resizable(False,False)
-root.configure(background='white')
+root.configure(background='whitesmoke')
 root.title('octaconnect  [Database Manager v1.0(SQL)]')
 root.iconbitmap('images/icon.ico')
 
@@ -103,10 +103,15 @@ Enn3.place(x=100, y=110)
 btn_connect = Button(FF1, text='connect' , cursor='hand2', fg='black', bd=1, relief=SOLID)
 btn_connect.place(x=227, y=49, width=65,height=80)
 
+LL4 = Label(FF1, text='Test server connection', fg='blue')
+LL4.place(x=10, y=165)
 
+#==== logo ====
+# logo by Vectorsmarket15 Isometric from https://www.flaticon.com/
 
-
-
+logo = PhotoImage(file='images/logo.png')
+logolabel = Label(root, image=logo)
+logolabel.place(x=615,y=45, width =390, height=500)
 
 
 root.mainloop()
