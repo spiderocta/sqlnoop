@@ -10,8 +10,8 @@ root.iconbitmap('images/icon.ico')
 maintTitle = Label(root, text='Database Connector and Manager v1.0 BETA', fg='white', bg='#19282F', font=('tajawal',15))
 maintTitle.pack(fill=X)
 
-
-F1 = Frame(root,bg='white',bd=2,relief=GROOVE)
+#===================== DB Controls Frame ===========================
+F1 = Frame(root,bg='whitesmoke',bd=2,relief=GROOVE)
 F1.place(x=5, y=40, width=300, height =190)
   
 controlsTitle = Label(F1, text='Database Controls', fg='white', bg='#19282F', font=('tajawal',15))
@@ -50,6 +50,64 @@ createTableButton.place(x=100, y=107, width=125)
 
 hideTablesButton = Button(F1, text='Hide' , cursor='hand2')
 hideTablesButton.place(x=230, y=107, width=60)
+
+
+
+#Columns section
+
+L = Label(F1, text='Add Cols: ')
+L.place(x=10, y=140)
+
+addColButton = Button(F1, text='Add Comlumns' , cursor='hand2')
+addColButton.place(x=100, y=137, width=125)
+
+hideColssButton = Button(F1, text='Hide' , cursor='hand2')
+hideColssButton.place(x=230, y=137, width=60)
+
+
+#====================== Database Connection Frame =======================
+
+FF1 = Frame(root,bg='whitesmoke',bd=2,relief=GROOVE)
+FF1.place(x=310, y=40, width=300, height =190)
+  
+controlsTitle = Label(FF1, text='Database Connection', fg='white', bg='#19282F', font=('tajawal',15))
+controlsTitle.pack(fill=X)
+
+#==================== Server ============================================
+
+LL1 = Label(FF1, text='server name : ')
+LL1.place(x=10, y=50)
+
+Enn1 = Entry(FF1)
+Enn1.place(x=100, y=50)
+
+#======= Server Details =========
+#===== username =======
+
+LL2 = Label(FF1, text='username : ')
+LL2.place(x=10, y=80)
+
+Enn2 = Entry(FF1)
+Enn2.place(x=100, y=80)
+
+#===== password =======
+
+LL3 = Label(FF1, text='password : ')
+LL3.place(x=10, y=110)
+
+Enn3 = Entry(FF1)
+Enn3.place(x=100, y=110)
+
+#====== Connect to server button =======
+
+btn_connect = Button(FF1, text='connect' , cursor='hand2', fg='black', bd=1, relief=SOLID)
+btn_connect.place(x=227, y=49, width=65,height=80)
+
+
+
+
+
+
 
 root.mainloop()
 
