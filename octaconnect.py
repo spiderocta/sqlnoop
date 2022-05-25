@@ -75,7 +75,7 @@ def col():
     global Ent4
     FF = Frame(root, bg='whitesmoke',bd=2, relief=GROOVE)
     FF.place(x =5, y=240, width=208, height=300)
-    title2 = Label(FF, text='Table Column', fg='white',bg='#19282F',height=2 ,font=('tajawal',12))
+    title2 = Label(FF, text='Table with one Column', fg='white',bg='#19282F',height=2 ,font=('tajawal',12))
     title2.pack(fill=X)
 
     lab = Label(FF, text='Db Name :')
