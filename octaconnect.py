@@ -26,7 +26,7 @@ def show_dbs():
     cursor = db.cursor()
     cursor.execute('SHOW DATABASES')
     F = Frame(root,bg='whitesmoke',bd=2,relief=GROOVE)
-    F.place(x=393, y=240, width=220,height=300)
+    F.place(x=425, y=240, width=185,height=300)
     title2 = Label(F, text='available databases', fg='white',bg='#19282F',height=2 ,font=('tajawal',12))
     title2.pack(fill=X)
     for x in cursor:
@@ -63,6 +63,116 @@ def db_create():
     except pymysql.Error as r:
         messagebox.showerror('Error',r)
 
+
+
+#create table
+def col():
+    global FF
+    global Ent
+    global Ent1
+    global Ent2
+    global Ent3
+    global Ent4
+    FF = Frame(root, bg='whitesmoke',bd=2, relief=GROOVE)
+    FF.place(x =5, y=240, width=208, height=300)
+    title2 = Label(FF, text='Table Column', fg='white',bg='#19282F',height=2 ,font=('tajawal',12))
+    title2.pack(fill=X)
+
+    lab = Label(FF, text='Db Name :')
+    lab.place(x=2,y=50)
+    Ent = Entry(FF)
+    Ent.place(x=80, y =50)
+
+    lab1 = Label(FF, text='Table Name :')
+    lab1.place(x=2,y=80)
+    Ent1 = Entry(FF)
+    Ent1.place(x=80, y =80)
+
+
+    lab2 = Label(FF, text='Col Name :')
+    lab2.place(x=2,y=110)
+    Ent2 = Entry(FF)
+    Ent2.place(x=80, y =110)
+
+    
+    lab3 = Label(FF, text='Col Type :')
+    lab3.place(x=2,y=140)
+    Ent3 = Entry(FF)
+    Ent3.place(x=80, y =140)
+
+    lab4 = Label(FF, text='Col Length :')
+    lab4.place(x=2,y=170)
+    Ent4 = Entry(FF)
+    Ent4.place(x=80, y =170)
+    
+
+    createTableBtn = Button(FF,text='create table with a column',cursor='hand2', relief=SOLID,  command= create_table)
+    createTableBtn.place(x=10, y=210, width=190, height=60)
+
+#many cols
+def cols():
+    global FFF
+    global Ent0
+    global Ent01
+    global Ent02
+    global Ent03
+    global Ent04
+    FFF = Frame(root, bg='whitesmoke',bd=2, relief=GROOVE)
+    FFF.place(x =216, y=240, width=210, height=300)
+    title2 = Label(FFF, text='New Columns', fg='white',bg='#19282F',height=2 ,font=('tajawal',12))
+    title2.pack(fill=X)
+
+    lab = Label(FFF, text='Db Name :')
+    lab.place(x=2,y=50)
+    Ent = Entry(FFF)
+    Ent.place(x=80, y =50)
+
+    lab1 = Label(FFF, text='Table Name :')
+    lab1.place(x=2,y=80)
+    Ent1 = Entry(FFF)
+    Ent1.place(x=80, y =80)
+
+
+    lab2 = Label(FFF, text='Col Name :')
+    lab2.place(x=2,y=110)
+    Ent2 = Entry(FFF)
+    Ent2.place(x=80, y =110)
+
+    
+    lab3 = Label(FFF, text='Col Type :')
+    lab3.place(x=2,y=140)
+    Ent3 = Entry(FFF)
+    Ent3.place(x=80, y =140)
+
+    lab4 = Label(FFF, text='Col Length :')
+    lab4.place(x=2,y=170)
+    Ent4 = Entry(FFF)
+    Ent4.place(x=80, y =170)
+    
+
+    createTableBtn = Button(FFF,text='add new columns',cursor='hand2', relief=SOLID)
+    createTableBtn.place(x=10, y=210, width=190, height=60)
+
+def create_table():
+    db_name = Ent.get()
+    table_name = Ent1.get()
+    col_name = Ent2.get()
+    col_type = Ent3.get()
+    col_length = Ent4.get()
+    try :
+        db = pymysql.connect(
+        host = 'localhost',
+        user = 'root',
+        password = 'root',
+        database = db_name
+        )
+        cursor = db.cursor()
+        cursor.execute('CREATE TABLE {} ({} {}({}))'.format(table_name,col_name,col_type,col_length))
+        messagebox.showinfo('DB[System]', 'Table {} Created Successfully'.format(table_name))
+    except pymysql.Error as r:
+        messagebox.showerror('Error',r)
+    
+        
 #===================== DB Controls Frame ===========================
 F1 = Frame(root,bg='whitesmoke',bd=2,relief=GROOVE)
 F1.place(x=5, y=40, width=300, height =190)
@@ -164,9 +274,11 @@ LL4.place(x=10, y=165)
 
 logo = PhotoImage(file='images/logo.png')
 logolabel = Label(root, image=logo)
-logolabel.place(x=615,y=45, width =390, height=500)
+logolabel.place(x=615,y=45, width =385, height=500)
 
 
+col()
+cols()
 #show_dbs()
 root.mainloop()
 
