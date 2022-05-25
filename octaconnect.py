@@ -47,7 +47,8 @@ def db_connect():
     except pymysql.Error as r:
         messagebox.showerror('Error',r)
         
-    
+
+#create database
 def db_create():
     db_name = En1.get()
     try :
