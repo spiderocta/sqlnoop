@@ -6,7 +6,7 @@ root = Tk()
 root.geometry('1010x550+200+30')
 root.resizable(False,False)
 root.configure(background='whitesmoke')
-root.title('yourSQL  [Database Manager v1.0(SQL)]')
+root.title('sqlnoob [Database Manager v1.0(SQL)]')
 root.iconbitmap('images/icon.ico')
 
 
@@ -297,7 +297,7 @@ logo = PhotoImage(file='images/logo.png')
 logolabel = Label(root, image=logo)
 logolabel.place(x=615,y=45, width =385, height=500)
 
-
+#un comment these if you want create table and columns frames always visible
 #col()
 #cols()
 #show_dbs()
