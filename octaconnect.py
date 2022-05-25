@@ -124,33 +124,33 @@ def cols():
 
     lab = Label(FFF, text='Db Name :')
     lab.place(x=2,y=50)
-    Ent = Entry(FFF)
-    Ent.place(x=80, y =50)
+    Ent0 = Entry(FFF)
+    Ent0.place(x=80, y =50)
 
     lab1 = Label(FFF, text='Table Name :')
     lab1.place(x=2,y=80)
-    Ent1 = Entry(FFF)
-    Ent1.place(x=80, y =80)
+    Ent01 = Entry(FFF)
+    Ent01.place(x=80, y =80)
 
 
     lab2 = Label(FFF, text='Col Name :')
     lab2.place(x=2,y=110)
-    Ent2 = Entry(FFF)
-    Ent2.place(x=80, y =110)
+    Ent02 = Entry(FFF)
+    Ent02.place(x=80, y =110)
 
     
     lab3 = Label(FFF, text='Col Type :')
     lab3.place(x=2,y=140)
-    Ent3 = Entry(FFF)
-    Ent3.place(x=80, y =140)
+    Ent03 = Entry(FFF)
+    Ent03.place(x=80, y =140)
 
     lab4 = Label(FFF, text='Col Length :')
     lab4.place(x=2,y=170)
-    Ent4 = Entry(FFF)
-    Ent4.place(x=80, y =170)
+    Ent04 = Entry(FFF)
+    Ent04.place(x=80, y =170)
     
 
-    createTableBtn = Button(FFF,text='add new columns',cursor='hand2', relief=SOLID)
+    createTableBtn = Button(FFF,text='add new columns',cursor='hand2', relief=SOLID, command=add_columns)
     createTableBtn.place(x=10, y=210, width=190, height=60)
 
 def create_table():
@@ -171,7 +171,25 @@ def create_table():
         messagebox.showinfo('DB[System]', 'Table {} Created Successfully'.format(table_name))
     except pymysql.Error as r:
         messagebox.showerror('Error',r)
-    
+
+def add_columns():
+    db_name = Ent0.get()
+    table_name = Ent01.get()
+    col_name = Ent02.get()
+    col_type = Ent03.get()
+    col_length = Ent04.get()
+    try :
+        db = pymysql.connect(
+        host = 'localhost',
+        user = 'root',
+        password = 'root',
+        database = db_name
+        )
+        cursor = db.cursor()
+        cursor.execute('ALTER TABLE {} ADD COLUMN {} {}({})'.format(table_name,col_name,col_type,col_length))
+        messagebox.showinfo('DB[System]', 'Column added Successfully')
+    except pymysql.Error as r:
+        messagebox.showerror('Error',r)
         
 #===================== DB Controls Frame ===========================
 F1 = Frame(root,bg='whitesmoke',bd=2,relief=GROOVE)
