@@ -223,7 +223,7 @@ createbutton.place(x=230, y = 78, width=60)
 
 # tables section
 
-L = Label(F1, text='Table Cols: ')
+L = Label(F1, text='Table Controls: ')
 L.place(x=10, y=110)
 
 createTableButton = Button(F1, text='Creat Table' , cursor='hand2')
@@ -236,7 +236,7 @@ hideTablesButton.place(x=230, y=107, width=60)
 
 #Columns section
 
-L = Label(F1, text='Add Cols: ')
+L = Label(F1, text='Cols Control: ')
 L.place(x=10, y=140)
 
 addColButton = Button(F1, text='Add Comlumns' , cursor='hand2')
