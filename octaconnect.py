@@ -6,7 +6,7 @@ root = Tk()
 root.geometry('1010x550+200+30')
 root.resizable(False,False)
 root.configure(background='whitesmoke')
-root.title('octaconnect  [Database Manager v1.0(SQL)]')
+root.title('yourSQL  [Database Manager v1.0(SQL)]')
 root.iconbitmap('images/icon.ico')
 
 
