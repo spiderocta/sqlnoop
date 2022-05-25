@@ -206,8 +206,9 @@ L.place(x=10, y=50)
 showAllDataBasesButton = Button(F1, text='Show Databases' , cursor='hand2', command = show_dbs)
 showAllDataBasesButton.place(x=105, y=47, width=125)
 
-hieAllDataBasesButton = Button(F1, text='Hide' , cursor='hand2')
-hieAllDataBasesButton.place(x= 235, y=47, width=55)
+#-------- for hide functionality -------
+#hieAllDataBasesButton = Button(F1, text='Hide' , cursor='hand2')
+#hieAllDataBasesButton.place(x= 235, y=47, width=55)
 
 
 # databases names section
@@ -226,11 +227,12 @@ createbutton.place(x=230, y = 78, width=60)
 L = Label(F1, text='Table Controls: ')
 L.place(x=10, y=110)
 
-createTableButton = Button(F1, text='Creat Table' , cursor='hand2')
+createTableButton = Button(F1, text='Creat Table' , cursor='hand2', command=col)
 createTableButton.place(x=100, y=107, width=125)
 
-hideTablesButton = Button(F1, text='Hide' , cursor='hand2')
-hideTablesButton.place(x=230, y=107, width=60)
+#-------- for hide functionality -------
+#hideTablesButton = Button(F1, text='Hide' , cursor='hand2')
+#hideTablesButton.place(x=230, y=107, width=60)
 
 
 
@@ -239,11 +241,12 @@ hideTablesButton.place(x=230, y=107, width=60)
 L = Label(F1, text='Cols Control: ')
 L.place(x=10, y=140)
 
-addColButton = Button(F1, text='Add Comlumns' , cursor='hand2')
+addColButton = Button(F1, text='Add Comlumns' , cursor='hand2', command=cols)
 addColButton.place(x=100, y=137, width=125)
 
-hideColssButton = Button(F1, text='Hide' , cursor='hand2')
-hideColssButton.place(x=230, y=137, width=60)
+#-------- for hide functionality -------
+#hideColssButton = Button(F1, text='Hide' , cursor='hand2')
+#hideColssButton.place(x=230, y=137, width=60)
 
 
 #====================== Database Connection Frame =======================
@@ -295,8 +298,8 @@ logolabel = Label(root, image=logo)
 logolabel.place(x=615,y=45, width =385, height=500)
 
 
-col()
-cols()
+#col()
+#cols()
 #show_dbs()
 root.mainloop()
 
