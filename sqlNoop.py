@@ -9,7 +9,6 @@ root.configure(background='whitesmoke')
 root.title('sqlnoob [Database Manager v1.0(SQL)]')
 root.iconbitmap('images/icon.ico')
 
-
 maintTitle = Label(root, text='Database Connector and Manager v1.0 BETA', fg='white', bg='#19282F', font=('tajawal',15))
 maintTitle.pack(fill=X)
 
