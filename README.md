@@ -62,7 +62,7 @@ The `SQLNOOP` project's goal is to support all DDL haters,  you can use it to cr
 and start hacking the planet with the actual code.
 
 ## Releases 
-
+[v1.0-Beta](https://github.com/spiderocta/sqlNoop/releases/tag/v1.0-beta)
 
 
 ## Contributing
