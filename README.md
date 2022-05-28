@@ -31,6 +31,25 @@ and has additional feature that many apps don't have, which is `bad design` and 
 this is a one-file python program `easy to use and run` first you need to have python3 installed on your system after cloning the repo you can easily run the command
 `python sqlNoop.py` if you have more than one version use `pythonX sqlNoop.py` where x is the version .or you can just double click the `sqlNoop.py` file if on windows and it will show up. 
 
+***note : Required modules before running the code :*** 
+
+- tkinter
+- pymysql-1.0.2 
+
+``` 
+pip install tkinter 
+``` 
+after executing this you may encounter the below error : 
+```
+ERROR: Could not find a version that satisfies the requirement tkinter (from versions: none)
+ERROR: No matching distribution found for tkinter
+``` 
+
+to resolve this you have to use `apt-get install python3-tk` instead. 
+
+second to install pymysql you need to run `pip install pymysql`
+
+***note : for those who faces _tkinter.TclError: bitmap on linux just head to  [#1](/../../issues/1) to solve it :*** 
 
 ## Screenshots 
 
