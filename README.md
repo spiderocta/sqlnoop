@@ -9,7 +9,7 @@
   <a href="#screenshots" title="Screenshots">Screenshots</a> |
   <a href="#usage" title="Usage">Usage</a> |
   <a href="#database-support" title="Database Support">Database Support</a> |
-  <a href="#features-and-compatibility" title="Features">Features and Compatibility</a> |
+  <a href="#features" title="Features">Features and Compatibility</a> |
   <a href="#releases" title="Releases">Releases</a> |
   <a href="#contributing" title="Contributing">Contributing</a>
 </p>
