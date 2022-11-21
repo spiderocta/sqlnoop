@@ -16,6 +16,11 @@
 
 <br>
 
+## Status 
+
+![100%](https://progress-bar.dev/100/?title=Done)
+<br /> 
+
 ## About
 `SQLNOOP` is a simple graphical user interface to interact with MySQL Database.
 
